@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Fun with GL!</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='//api.tiles.mapbox.com/mapbox-gl-js/v0.11.1/mapbox-gl.js'></script>
+    <link href='//api.tiles.mapbox.com/mapbox-gl-js/v0.11.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src='jquery.srt.js'></script>
+    <script src="mapSRT.js"></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #range {
+            position: absolute;
+            bottom: 10px;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        #rangeInput {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<div id="subtitles" data-srt="test.srt" style="display:none;">
+
+</div>
+<script src='index.js'></script>
+
+</body>
+</html>
