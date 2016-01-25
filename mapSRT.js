@@ -1,6 +1,11 @@
 (function($) {
 
-    window.mapSRT = function(map, videoURLs, srtFile) {
+    window.mapSRT = function(map, videoURLs, srtFile, options) {
+        options = options || {};
+        var defaults = {
+            'muted': false
+        };
+        var opts = $.extend(defaults, options);
         map.on('style.load', function () {
             window.videoSource = new mapboxgl.VideoSource({
                 'urls': videoURLs,
@@ -40,6 +45,9 @@
                         }
                     });
                     video.play();
+                    if (opts.muted) {
+                        video.muted = true;
+                    }
                 });
             });
         });
